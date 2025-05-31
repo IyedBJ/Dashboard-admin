@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajouter un Événement</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <section class="container my-5">
+      <h2>Ajouter un Événement</h2>
+      <form id="eventForm">
+        <div class="mb-3">
+          <label for="eventType" class="form-label">Type d'événement</label>
+          <select class="form-control" id="eventType" required>
+            <option value="filter-app">Festivals 🎭</option>
+            <option value="filter-product">Événements 🎊</option>
+            <option value="filter-branding">Attractions touristiques 🏰</option>
+            <option value="filter-books">
+              Activités sportives et de plein air 🏄
+            </option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="eventTitle" class="form-label"
+            >Titre de l'événement</label
+          >
+          <input type="text" class="form-control" id="eventTitle" required />
+        </div>
+        <div class="mb-3">
+          <label for="eventDate" class="form-label">Date de l'événement</label>
+          <input type="date" class="form-control" id="eventDate" required />
+        </div>
+        <div class="mb-3">
+          <label for="eventDescription" class="form-label"
+            >Description courte</label
+          >
+          <textarea
+            class="form-control"
+            id="eventDescription"
+            rows="2"
+            required
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="eventDetailedDescription" class="form-label"
+            >Description détaillée</label
+          >
+          <textarea
+            class="form-control"
+            id="eventDetailedDescription"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="eventImage" class="form-label">Choisir une image</label>
+          <input
+            type="file"
+            class="form-control"
+            id="eventImage"
+            accept="image/*"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">
+          Ajouter l'événement
+        </button>
+      </form>
+    </section>
+
+    <script>
+      document
+        .getElementById("eventForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          let type = document.getElementById("eventType").value;
+          let title = document.getElementById("eventTitle").value;
+          let date = document.getElementById("eventDate").value;
+          let description = document.getElementById("eventDescription").value;
+          let detailedDescription = document.getElementById(
+            "eventDetailedDescription"
+          ).value;
+          let imageInput = document.getElementById("eventImage");
+
+          // Vérification de l'image
+          if (imageInput.files.length === 0) {
+            alert("Veuillez télécharger une image.");
+            return;
+          }
+
+          const imageFile = imageInput.files[0];
+          if (!imageFile.type.startsWith("image/")) {
+            alert("Le fichier téléchargé n'est pas une image valide.");
+            return;
+          }
+
+          let imageUrl = URL.createObjectURL(imageFile);
+
+          let eventObj = {
+            type,
+            title,
+            date,
+            description,
+            detailedDescription,
+            imageUrl,
+          };
+          let events = JSON.parse(localStorage.getItem("events")) || [];
+          events.push(eventObj);
+          localStorage.setItem("events", JSON.stringify(events));
+
+          document.getElementById("eventForm").reset();
+          alert("Événement ajouté avec succès !");
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

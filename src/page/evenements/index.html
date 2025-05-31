@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baladia +</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- Favicons -->
+    <link href="assets/img/logo.png" rel="icon" />
+    <link href="assets/img/logo.png" rel="apple-touch-icon" />
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- React and Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.development.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/babel-standalone@7.22.10/babel.min.js"></script>
+    <!-- Vendor JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/js/glightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/purecounterjs@1.5.0/dist/purecounter_vanilla.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
+    <!-- Vendor CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      // Header Component
+      function Header() {
+        return (
+          <header
+            id="header"
+            className="header flex items-center sticky top-0 bg-white shadow-md z-50"
+          >
+            <div className="container-fluid container-xl flex items-center justify-between">
+              <a href="index.html" className="logo flex items-center">
+                <img
+                  src="assets/img/logo.png"
+                  alt=""
+                  className="w-[200px] h-[50px]"
+                />
+                <h1 className="sitename text-2xl font-bold">Baladia +</h1>
+              </a>
+              <nav id="navmenu" className="navmenu">
+                <ul className="flex space-x-4">
+                  <li>
+                    <a href="#hero" className="text-blue-600 font-semibold">
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#about"
+                      className="text-gray-700 hover:text-blue-600"
+                    >
+                      About
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#services"
+                      className="text-gray-700 hover:text-blue-600"
+                    >
+                      Nos Services
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#portfolio"
+                      className="text-gray-700 hover:text-blue-600"
+                    >
+                      Événements
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#team"
+                      className="text-gray-700 hover:text-blue-600"
+                    >
+                      Team
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <a
+                href="#about"
+                className="btn-getstarted bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+              >
+                Get Started
+              </a>
+            </div>
+          </header>
+        );
+      }
+
+      // Hero Section Component
+      function HeroSection() {
+        return (
+          <section id="hero" className="hero relative">
+            <img
+              src="assets/img/img.jpg"
+              alt=""
+              className="w-full h-[600px] object-cover"
+              data-aos="fade-in"
+            />
+            <div className="container mx-auto px-4 py-12">
+              <div className="row flex">
+                <div className="col-lg-6">
+                  <h2
+                    className="text-4xl font-bold mb-4"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    Bienvenue sur Baladia+
+                  </h2>
+                  <p
+                    className="text-lg mb-6"
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                  >
+                    Notre Mairie en Ligne Baladia+ est la plateforme numérique
+                    officielle de la municipalité, conçue pour rapprocher la
+                    mairie de ses citoyens.
+                  </p>
+                  <div
+                    className="flex space-x-4"
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                  >
+                    <a
+                      href="#about"
+                      className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                    >
+                      Get Started
+                    </a>
+                    <a
+                      href="https://www.youtube.com/watch?v=OtJVufo3IrA"
+                      className="glightbox flex items-center text-blue-600 hover:text-blue-800"
+                    >
+                      <i className="bi bi-play-circle mr-2"></i>
+                      <span>Watch Video</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        );
+      }
+
+      // Clients Section Component
+      function ClientsSection() {
+        const swiperConfig = {
+          loop: true,
+          speed: 600,
+          autoplay: { delay: 5000 },
+          slidesPerView: "auto",
+          pagination: {
+            el: ".swiper-pagination",
+            type: "bullets",
+            clickable: true,
+          },
+          breakpoints: {
+            320: { slidesPerView: 2, spaceBetween: 40 },
+            480: { slidesPerView: 3, spaceBetween: 60 },
+            640: { slidesPerView: 4, spaceBetween: 80 },
+            992: { slidesPerView: 6, spaceBetween: 120 },
+          },
+        };
+
+        React.useEffect(() => {
+          new Swiper(".swiper", swiperConfig);
+        }, []);
+
+        return (
+          <section id="clients" className="clients py-12">
+            <div
+              className="container mx-auto px-4"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div className="swiper init-swiper">
+                <div className="swiper-wrapper flex items-center">
+                  {[
+                    "steg.png",
+                    "sonede.png",
+                    "onas.png",
+                    "sts.png",
+                    "cnam.png",
+                    "Tunisie-Telecom.png",
+                    "himaya.png",
+                    "croissant.png",
+                  ].map((client, index) => (
+                    <div className="swiper-slide" key={index}>
+                      <img
+                        src={`assets/img/clients/${client}`}
+                        className="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                  ))}
+                </div>
+                <div className="swiper-pagination"></div>
+              </div>
+            </div>
+          </section>
+        );
+      }
+
+      // About Section Component
+      function AboutSection() {
+        return (
+          <section id="about" className="about py-12 bg-gray-900 text-white">
+            <div className="container mx-auto px-4">
+              <div className="flex flex-wrap -mx-4">
+                <div
+                  className="w-full xl:w-5/12 px-4 flex flex-col"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
+                  <h3 className="text-2xl font-bold mb-4">
+                    Notre Municipalite vise a :
+                  </h3>
+                </div>
+                <div
+                  className="w-full xl:w-7/12 px-4"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <div className="flex flex-wrap -mx-4">
+                    {[
+                      {
+                        icon: "bi-briefcase",
+                        text: "Garantir un environnement propre et bien aménagé.",
+                      },
+                      {
+                        icon: "bi-gem",
+                        text: "Offrir des services municipaux efficaces et accessibles.",
+                      },
+                      {
+                        icon: "bi-broadcast",
+                        text: "Encourager la participation des citoyens aux décisions locales.",
+                      },
+                      {
+                        icon: "bi-easel",
+                        text: "Promouvoir le développement économique et social de la ville.",
+                      },
+                    ].map((item, index) => (
+                      <div className="w-full md:w-6/12 px-4 mb-4" key={index}>
+                        <div className="icon-box flex items-start">
+                          <i className={`bi ${item.icon} text-3xl mr-4`}></i>
+                          <h4 className="text-lg">{item.text}</h4>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        );
+      }
+
+      // Stats Section Component
+      function StatsSection() {
+        return (
+          <section id="stats" className="stats py-12">
+            <div
+              className="container mx-auto px-4"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div className="flex flex-wrap -mx-4">
+                {[
+                  { icon: "bi-emoji-smile", count: 232, text: "Happy Clients" },
+                  { icon: "bi-journal-richtext", count: 521, text: "Projects" },
+                  { icon: "bi-headset", count: 1463, text: "Hours Of Support" },
+                  { icon: "bi-people", count: 15, text: "Hard Workers" },
+                ].map((stat, index) => (
+                  <div
+                    className="w-full lg:w-3/12 md:w-6/12 px-4 mb-4 flex flex-col items-center"
+                    key={index}
+                  >
+                    <i className={`bi ${stat.icon} text-4xl mb-2`}></i>
+                    <div className="stats-item text-center">
+                      <span
+                        data-purecounter-start="0"
+                        data-purecounter-end={stat.count}
+                        data-purecounter-duration="1"
+                        className="purecounter text-3xl font-bold"
+                      ></span>
+                      <p>{stat.text}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        );
+      }
+
+      // Tabs Section Component
+      function TabsSection() {
+        return (
+          <section id="tabs" className="tabs py-12">
+            <div className="container mx-auto px-4">
+              <ul
+                className="nav nav-tabs flex"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <li className="nav-item w-3/12">
+                  <a
+                    className="nav-link active flex items-center"
+                    data-bs-toggle="tab"
+                    data-bs-target="#tabs-tab-1"
+                  >
+                    <i className="bi bi-binoculars mr-2"></i>
+                    <h4 className="hidden lg:block">Historique</h4>
+                  </a>
+                </li>
+              </ul>
+              <div
+                className="tab-content"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <div className="tab-pane fade active show" id="tabs-tab-1">
+                  <div className="flex flex-wrap -mx-4">
+                    <div className="w-full lg:w-6/12 px-4 order-2 lg:order-1 mt-3 lg:mt-0">
+                      <h3 className="text-2xl font-bold mb-4">
+                        Héritage et progrès – Votre mairie, entre histoire et
+                        avenir.
+                      </h3>
+                      <p className="fst-italic mb-4">
+                        La ville de Sousse, surnommée la « perle du Sahel », est
+                        une cité portuaire située à 143 kilomètres au sud de
+                        Tunis, en Tunisie. Fondée au XIᵉ siècle av. J.-C. sous
+                        le nom d'Hadrumète par les Phéniciens, elle a traversé
+                        les âges en conservant un riche patrimoine historique.
+                      </p>
+                      <ul className="list-none">
+                        <li className="flex items-start mb-2">
+                          <i className="bi bi-check2-all mr-2"></i>La
+                          municipalité de Sousse a été créée le 16 juillet 1884
+                          sous l'administration du protectorat français.
+                        </li>
+                        <li className="flex items-start mb-2">
+                          <i className="bi bi-check2-all mr-2"></i>Son premier
+                          conseil municipal fut instauré le 25 juillet 1884,
+                          avec Mohamed Belajouza comme premier président,
+                          accompagné d'Emile Villedon et Edouard Kerrien en tant
+                          que vice-présidents.
+                        </li>
+                        <li className="flex items-start mb-2">
+                          <i className="bi bi-check2-all mr-2"></i>À l'origine,
+                          la mairie couvrait une superficie de 32 hectares, mais
+                          avec le développement de la ville, son territoire et
+                          ses compétences se sont progressivement étendus.
+                        </li>
+                      </ul>
+                      <p>
+                        Aujourd’hui, la mairie de Sousse joue un rôle clé dans
+                        la préservation de ce patrimoine et l’adaptation de la
+                        ville aux défis modernes.
+                      </p>
+                    </div>
+                    <div className="w-full lg:w-6/12 px-4 order-1 lg:order-2 text-center">
+                      <img
+                        src="assets/img/baladia-sousse.jpg"
+                        alt=""
+                        className="img-fluid"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        );
+      }
+
+      // Services Section Component
+      function ServicesSection() {
+        const services = [
+          {
+            icon: "bulletin-de-vote.png",
+            title: "Demande d’extrait de naissance en ligne",
+            description:
+              "Ce service permet aux citoyens de demander un extrait de naissance directement en ligne, évitant ainsi de devoir se déplacer à la mairie. Une fois la demande traitée, le document peut être envoyé par voie postale ou téléchargé en version électronique.",
+            delay: 100,
+          },
+          {
+            icon: "avertissement-triangulaire.png",
+            title: "Signalement de problèmes (ordures, éclairage, routes…)",
+            description:
+              "Ce service permet aux citoyens de signaler des problèmes dans leur quartier, comme des défaillances d'éclairage public, des routes endommagées ou des déchets non ramassés. Les signalements sont ensuite traités par les services compétents pour assurer une intervention rapide.",
+            delay: 500,
+          },
+          {
+            icon: "exclamation-de-fichier.png",
+            title: "Remplissage d’un formulaire de contact pour réclamations",
+            description:
+              "Les citoyens peuvent remplir un formulaire en ligne pour soumettre leurs réclamations ou préoccupations à la mairie. Cela permet une communication directe avec les agents municipaux et une prise en charge rapide des demandes.",
+            delay: 600,
+          },
+          {
+            icon: "parametre-de-flux-de-travail.png",
+            title: "Consultation des projets d’urbanisme en cours",
+            description:
+              "Ce service permet aux citoyens de consulter les projets d’urbanisme en cours dans leur ville, comme les travaux de rénovation, la construction de nouveaux espaces publics ou les plans de développement urbain. Cela permet une meilleure transparence et une participation active des citoyens aux projets de la ville.",
+            delay: 600,
+          },
+          {
+            icon: "cercle-enveloppe.png",
+            title: "Envoi et réception de messages via une messagerie intégrée",
+            description:
+              "Ce service offre une messagerie sécurisée pour permettre aux citoyens de communiquer directement avec la mairie. Ils peuvent ainsi poser des questions, recevoir des réponses ou être informés de l'avancement de leurs demandes.",
+            delay: 600,
+          },
+          {
+            icon: "calendrier-horloge.png",
+            title: "Consultation d’un agenda interactif des événements locaux",
+            description:
+              "Ce service met à disposition des citoyens un agenda interactif des événements locaux, tels que les festivals, marchés, réunions publiques et autres événements organisés par la mairie. Cela permet aux citoyens de rester informés des activités à venir dans leur ville.",
+            delay: 600,
+          },
+        ];
+
+        return (
+          <section
+            id="services"
+            className="services py-12 bg-gray-900 text-white"
+          >
+            <div className="container mx-auto px-4">
+              <div
+                className="section-title text-center mb-12"
+                data-aos="fade-up"
+              >
+                <h2 className="text-3xl font-bold">Nos Services</h2>
+                <p>
+                  Nos services assurent aux citoyens une tranquillité d'esprit,
+                  en leur offrant des solutions pratiques et efficaces pour
+                  faciliter leurs démarches administratives au quotidien.
+                </p>
+              </div>
+              <div className="flex flex-wrap -mx-4">
+                {services.map((service, index) => (
+                  <div
+                    className="w-full md:w-6/12 px-4 mb-4"
+                    key={index}
+                    data-aos="fade-up"
+                    data-aos-delay={service.delay}
+                  >
+                    <div className="service-item flex h-full">
+                      <div className="icones mr-4">
+                        <img
+                          src={`images page d'accueil/${service.icon}`}
+                          alt="Icône de messagerie"
+                          className="w-[70px] h-auto"
+                        />
+                      </div>
+                      <div className="conteneur flex-1">
+                        <h4 className="title text-lg font-semibold">
+                          <a href="#" className="stretched-link">
+                            {service.title}
+                          </a>
+                        </h4>
+                        <p className="description">{service.description}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        );
+      }
+
+      // Portfolio Section Component
+      function PortfolioSection() {
+        const [events, setEvents] = React.useState([]);
+
+        React.useEffect(() => {
+          const storedEvents = JSON.parse(localStorage.getItem("events")) || [];
+          setEvents(storedEvents);
+
+          // Initialize Isotope
+          const isotopeContainer = document.querySelector(".isotope-container");
+          if (isotopeContainer) {
+            imagesLoaded(isotopeContainer, () => {
+              new Isotope(isotopeContainer, {
+                itemSelector: ".portfolio-item",
+                layoutMode: "masonry",
+              });
+            });
+          }
+        }, []);
+
+        const portfolioItems = [
+          {
+            filter: "filter-app",
+            img: "6381499_orig.jpg",
+            title: "Festival International de Sousse 🎭🌍",
+            description:
+              "Un événement culturel majeur qui rassemble des artistes et des talents du monde entier pour célébrer la musique, le cinéma et les arts dans une atmosphère unique.",
+            href: "Festival International de Sousse.html",
+          },
+          {
+            filter: "filter-product",
+            img: "Iftar-à-Boujaafar.jpg",
+            title: "Sousse Iftar à la Plage 🌅",
+            description:
+              "Un grand iftar collectif organisé sur la plage pendant le Ramadan, réunissant familles et amis dans une ambiance conviviale.",
+            href: "Sousse Iftar à la Plage.html",
+          },
+          {
+            filter: "filter-branding",
+            img: "71f05445-city-47373-164b3028a04.jpg",
+            title: "Port El Kantaoui ⚓",
+            description:
+              "Un port de plaisance touristique, parfait pour une promenade en bateau ou pour explorer ses restaurants et magasins.",
+            href: "Port El Kantaoui.html",
+          },
+          {
+            filter: "filter-books",
+            img: "horizontal-sousse.jpg",
+            title: "Plages de Sousse 🌞",
+            description:
+              "Sousse est connue pour ses plages de sable fin, idéales pour la baignade, le jet-ski, et autres sports nautiques.",
+            href: "Plages de Sousse.html",
+          },
+          {
+            filter: "filter-app",
+            img: "Carnaval-Aouessou-Sousse.jpg",
+            title: "Carnaval d'Aoussou 🎉",
+            description:
+              "Festival d'été avec un grand défilé de chars, fanfares et animations.",
+            href: "Carnaval d'Aoussou.html",
+          },
+          {
+            filter: "filter-product",
+            img: "2(14).jpg",
+            title: "Célébrations religieuses à la Zawiya de Sidi Bouraoui 🕌",
+            description:
+              "Fêtes traditionnelles et religieuses dans la médina de Sousse.",
+            href: "Célébrations religieuses à la Zawiya de Sidi Bouraoui.html",
+          },
+          {
+            filter: "filter-branding",
+            img: "16441077.webp",
+            title: "La Médina de Sousse 🏙️",
+            description:
+              "Un site classé au patrimoine mondial de l'UNESCO, avec ses souks, sa grande mosquée et ses murs fortifiés.",
+            href: "La Médina de Sousse.html",
+          },
+          {
+            filter: "filter-books",
+            img: "téléchargement.webp",
+            title: "Golf de Port El Kantaoui ⛳",
+            description:
+              "Un parcours de golf de classe mondiale avec vue sur la mer et des installations de qualité.",
+            href: "Golf de Port El Kantaoui.html",
+          },
+          {
+            filter: "filter-app",
+            img: "Bastien_et_Bastienne.jpg",
+            title: "Octobre Musical de Sousse 🎼",
+            description:
+              "Festival de musique classique qui accueille des artistes tunisiens et internationaux.",
+            href: "Octobre Musical de Sousse.html",
+          },
+          {
+            filter: "filter-product",
+            img: "fairground-festival.jpg",
+            title: "Fête de la Musique de Sousse 🎶",
+            description:
+              "Chaque année, Sousse célèbre la musique avec des concerts en plein air sur les places publiques, donnant une scène aux artistes locaux et internationaux.",
+            href: "Fête de la Musique de Sousse.html",
+          },
+          {
+            filter: "filter-branding",
+            img: "GI91pGMSSF5U4Drtfm05-scaled.jpeg",
+            title: "Le Musée Archéologique de Sousse 🖼️",
+            description:
+              "Il abrite une riche collection d'artefacts antiques, dont des mosaïques romaines impressionnantes.",
+            href: "Le Musée Archéologique de Sousse.html",
+          },
+          {
+            filter: "filter-app",
+            img: "08.jpg",
+            title: "Festival de la Méditerranée de Sousse 🌊",
+            description:
+              "Un festival célébrant la culture méditerranéenne avec des concerts, des spectacles de danse et des expositions artistiques.",
+            href: "Festival de la Méditerranée de Sousse.html",
+          },
+          {
+            filter: "filter-books",
+            img: "10164874-sousse-tunisie-aug-01-young-fakir-participe-au-show-de-fakir-dans-un-bateau-pirate-le-1er-août.jpg",
+            title: "Excursions en bateau 🚤",
+            description:
+              "Plusieurs opérateurs proposent des sorties en mer, avec des activités comme la pêche, le snorkeling, ou même la plongée sous-marine.",
+            href: "Excursions en bateau.html",
+          },
+          {
+            filter: "filter-branding",
+            img: "site_0498_0008-1200-630-20151105160146.jpg",
+            title: "Le Ribat de Sousse 🏰",
+            description:
+              "Une forteresse historique construite au IXe siècle, offrant une vue panoramique spectaculaire sur la ville et la mer.",
+            href: "Le Ribat de Sousse.html",
+          },
+        ];
+
+        return (
+          <section id="portfolio" className="portfolio py-12">
+            <div className="container mx-auto px-4">
+              <div
+                className="section-title text-center mb-12"
+                data-aos="fade-up"
+              >
+                <h2 className="text-3xl font-bold">
+                  Culture, Loisirs et Événements à Sousse
+                </h2>
+                <p>
+                  Découvrez une ville vibrante où l’histoire rencontre la
+                  modernité à travers des événements uniques, des activités de
+                  loisirs variées et un riche patrimoine culturel.
+                </p>
+              </div>
+              <div
+                className="isotope-layout"
+                data-default-filter="*"
+                data-layout="masonry"
+                data-sort="original-order"
+              >
+                <ul
+                  className="portfolio-filters isotope-filters flex space-x-4 mb-8"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
+                  <li
+                    data-filter="*"
+                    className="filter-active text-blue-600 cursor-pointer"
+                  >
+                    All
+                  </li>
+                  <li
+                    data-filter=".filter-app"
+                    className="text-gray-700 hover:text-blue-600 cursor-pointer"
+                  >
+                    Festivals 🎭
+                  </li>
+                  <li
+                    data-filter=".filter-product"
+                    className="text-gray-700 hover:text-blue-600 cursor-pointer"
+                  >
+                    Événements 🎊
+                  </li>
+                  <li
+                    data-filter=".filter-branding"
+                    className="text-gray-700 hover:text-blue-600 cursor-pointer"
+                  >
+                    Attractions touristiques 🏰
+                  </li>
+                  <li
+                    data-filter=".filter-books"
+                    className="text-gray-700 hover:text-blue-600 cursor-pointer"
+                  >
+                    Activités sportives et de plein air 🏄
+                  </li>
+                </ul>
+                <div
+                  className="row gy-4 isotope-container"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  {portfolioItems.map((item, index) => (
+                    <div
+                      className={`col-lg-4 col-md-6 portfolio-item isotope-item ${item.filter}`}
+                      key={index}
+                    >
+                      <div className="portfolio-content h-full">
+                        <img
+                          src={`assets/img/festivals/${item.img}`}
+                          className="img-fluid"
+                          alt=""
+                        />
+                        <div className="portfolio-info p-4">
+                          <h4 className="text-lg font-semibold">
+                            {item.title}
+                          </h4>
+                          <p>{item.description}</p>
+                          <a
+                            href={`assets/img/festivals/${item.img}`}
+                            title={`${item.title} <br/> ${item.description}`}
+                            data-gallery={`portfolio-gallery-${item.filter}`}
+                            className="glightbox preview-link"
+                          >
+                            <i className="bi bi-zoom-in"></i>
+                          </a>
+                          <a
+                            href={item.href}
+                            title="More Details"
+                            className="details-link"
+                          >
+                            <i className="bi bi-link-45deg"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                  {events.map((event, index) => (
+                    <div
+                      className={`col-lg-4 col-md-6 portfolio-item isotope-item ${event.type}`}
+                      key={`event-${index}`}
+                    >
+                      <div className="portfolio-content h-full">
+                        <img
+                          src={event.imageUrl}
+                          className="img-fluid"
+                          alt={event.title}
+                        />
+                        <div className="portfolio-info p-4">
+                          <h4 className="text-lg font-semibold">
+                            {event.title}
+                          </h4>
+                          <p>{event.description}</p>
+                          <a
+                            href={event.imageUrl}
+                            title={`${event.title} <br/> ${event.description}`}
+                            data-gallery="portfolio-gallery-app"
+                            className="glightbox preview-link"
+                          >
+                            <i className="bi bi-zoom-in"></i>
+                          </a>
+                          <a
+                            href={`event.html?title=${encodeURIComponent(
+                              event.title
+                            )}&date=${encodeURIComponent(
+                              event.date
+                            )}&description=${encodeURIComponent(
+                              event.description
+                            )}&detailedDescription=${encodeURIComponent(
+                              event.detailedDescription
+                            )}&imageUrl=${encodeURIComponent(event.imageUrl)}`}
+                            title="More Details"
+                            className="details-link"
+                          >
+                            <i className="bi bi-link-45deg"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        );
+      }
+
+      // Testimonials Section Component
+      function TestimonialsSection() {
+        const swiperConfig = {
+          loop: true,
+          speed: 600,
+          autoplay: { delay: 5000 },
+          slidesPerView: "auto",
+          pagination: {
+            el: ".swiper-pagination",
+            type: "bullets",
+            clickable: true,
+          },
+          breakpoints: {
+            320: { slidesPerView: 1, spaceBetween: 40 },
+            1200: { slidesPerView: 3, spaceBetween: 10 },
+          },
+        };
+
+        React.useEffect(() => {
+          new Swiper(".swiper", swiperConfig);
+        }, []);
+
+        const testimonials = [
+          {
+            img: "tt2.png",
+            name: "Raslen Abidi",
+            title: "Professeur",
+            stars: 5,
+            text: "Un service efficace et accessible ! Grâce à cette plateforme, j’ai pu gérer mes démarches administratives rapidement et sans tracas. Je recommande vivement à tous ceux qui cherchent une solution simple et pratique.",
+          },
+          {
+            img: "tt.png",
+            name: "Amal Ben Ali",
+            title: "Designer",
+            stars: 5,
+            text: "Un service clair et efficace ! Cette plateforme m’a permis d’accéder à toutes les informations utiles en quelques clics. Un vrai gain de temps pour gérer mes démarches sans stress ni déplacement inutile !",
+          },
+          {
+            img: "tt3.png",
+            name: "Malek Zayen",
+            title: "Architecte",
+            stars: 4,
+            text: "Une plateforme innovante et moderne ! J’ai découvert un service qui simplifie vraiment la relation avec la mairie. Un outil indispensable pour rester informé et effectuer ses démarches !",
+          },
+          {
+            img: "tt4.png",
+            name: "Asil Ghonwa",
+            title: "Avocate",
+            stars: 5,
+            text: "Un service accessible et bien pensé ! Grâce à cette plateforme, j’ai pu signaler un problème dans ma ville en quelques clics. Une réactivité exemplaire qui améliore le quotidien de tous les citoyens !",
+          },
+          {
+            img: "tt5.png",
+            name: "Amir Gharbi",
+            title: "Ingénieur",
+            stars: 5,
+            text: "Une expérience fluide et agréable ! Tout est conçu pour simplifier la vie des citoyens et rendre les démarches plus accessibles. Une belle initiative qui modernise la relation avec la mairie !",
+          },
+        ];
+
+        return (
+          <section id="testimonials" className="testimonials py-12">
+            <div className="container mx-auto px-4">
+              <div
+                className="section-title text-center mb-12"
+                data-aos="fade-up"
+              >
+                <h2 className="text-3xl font-bold">Testimonials</h2>
+                <p>
+                  Leurs expériences, notre engagement – Découvrez leurs
+                  témoignages.
+                </p>
+              </div>
+              <div
+                className="swiper init-swiper"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div className="swiper-wrapper">
+                  {testimonials.map((testimonial, index) => (
+                    <div className="swiper-slide" key={index}>
+                      <div className="testimonial-item text-center p-4">
+                        <img
+                          src={`assets/img/testimonials/${testimonial.img}`}
+                          className="testimonial-img rounded-full w-24 h-24 mx-auto mb-4"
+                          alt=""
+                        />
+                        <h3 className="text-lg font-semibold">
+                          {testimonial.name}
+                        </h3>
+                        <h4>{testimonial.title}</h4>
+                        <div className="stars flex justify-center mb-4">
+                          {[...Array(testimonial.stars)].map((_, i) => (
+                            <i
+                              className="bi bi-star-fill text-yellow-400"
+                              key={i}
+                            ></i>
+                          ))}
+                        </div>
+                        <p>
+                          <i className="bi bi-quote quote-icon-left text-2xl"></i>
+                          <span>{testimonial.text}</span>
+                          <i className="bi bi-quote quote-icon-right text-2xl"></i>
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="swiper-pagination"></div>
+              </div>
+            </div>
+          </section>
+        );
+      }
+
+      // FAQ Section Component
+      function FaqSection() {
+        const faqs = [
+          {
+            question:
+              "Comment puis-je demander un extrait de naissance en ligne ?",
+            answer:
+              "Pour demander un extrait de naissance, il vous suffit de vous connecter à votre compte sur le site de la mairie, remplir le formulaire de demande, et choisir la méthode de réception (en ligne ou par voie postale). Une fois votre demande traitée, vous recevrez votre extrait selon l'option choisie.",
+          },
+          {
+            question:
+              "Comment signaler un problème (panne d’éclairage, déchets, etc.)",
+            answer:
+              "Vous pouvez signaler tout problème en utilisant le formulaire de signalement en ligne disponible sur notre site. Indiquez le type de problème, sa localisation et toute information utile pour faciliter l’intervention des services municipaux.",
+          },
+          {
+            question: "Comment puis-je contacter un service municipal ?",
+            answer:
+              "Vous pouvez contacter les différents services municipaux via les informations de contact disponibles sur notre site, ou en envoyant un message directement par la messagerie intégrée du site.",
+          },
+          {
+            question:
+              "Est-ce que je peux consulter les projets d'urbanisme en cours ?",
+            answer:
+              "Oui, tous les projets d'urbanisme en cours sont listés sur notre site, avec des détails sur leur avancement et les informations publiques associées. Vous pouvez aussi poser des questions ou faire des commentaires via le formulaire dédié.",
+          },
+          {
+            question: "Comment puis-je déposer une réclamation ?",
+            answer:
+              "Pour déposer une réclamation, remplissez le formulaire en ligne disponible dans la section 'Contact' de notre site. Une fois votre réclamation reçue, un agent municipal prendra contact avec vous pour vous fournir une réponse.",
+          },
+          {
+            question:
+              "Quels documents sont nécessaires pour demander un extrait de naissance ?",
+            answer:
+              "Pour une demande d’extrait de naissance, vous aurez besoin de votre pièce d'identité et de toute information complémentaire demandée dans le formulaire de demande (par exemple, la date de naissance complète ou le nom des parents). Ces informations sont nécessaires pour traiter votre demande rapidement.",
+          },
+        ];
+
+        return (
+          <section id="faq" className="faq py-12">
+            <div className="container mx-auto px-4">
+              <div
+                className="section-title text-center mb-12"
+                data-aos="fade-up"
+              >
+                <h2 className="text-3xl font-bold">
+                  Questions Fréquemment Posées
+                </h2>
+                <p>
+                  Ces questions couvrent une gamme de services courants qu’une
+                  mairie pourrait offrir en ligne.
+                </p>
+              </div>
+              <div className="row justify-content-center">
+                <div
+                  className="col-lg-10"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
+                  <div className="faq-container">
+                    {faqs.map((faq, index) => (
+                      <div
+                        className={`faq-item ${
+                          index === 0 ? "faq-active" : ""
+                        }`}
+                        key={index}
+                      >
+                        <h3 className="text-lg font-semibold cursor-pointer">
+                          {faq.question}
+                        </h3>
+                        <div className="faq-content">
+                          <p>{faq.answer}</p>
+                        </div>
+                        <i className="faq-toggle bi bi-chevron-right"></i>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        );
+      }
+
+      // Team Section Component
+      function TeamSection() {
+        const teamMembers = [
+          {
+            img: "team-1.jpg",
+            name: "Mohamed Iyed Ben Jazia",
+            role: "Scrum Master",
+            social: {
+              facebook: "https://www.facebook.com/mohamediyed.bj",
+              linkedin:
+                "https://www.linkedin.com/in/iyed-ben-jazia-00569b304/?fbclid=IwY2xjawIxuiNleHRuA2FlbQIxMAABHQTSjOtiPD-80vQJiuehFinQzltPDtiOc6e0ZTOoitp6RyJhK4ToKx79hw_aem_hn48h-O_hpbv__MPrR7k9A",
+            },
+          },
+          {
+            img: "team-2.jpg",
+            name: "Chaima Dhouibi",
+            role: "Web Developer",
+            social: {},
+          },
+          {
+            img: "team-4.png",
+            name: "Samar Guedri",
+            role: "Web Developer",
+            social: {
+              facebook:
+                "https://www.facebook.com/profile.php?id=100085852059112",
+              linkedin: "https://www.linkedin.com/in/samar-guedri-b599a7353/",
+            },
+          },
+          {
+            img: "team-3.jpg",
+            name: "Zardi Yassin",
+            role: "Web Developer",
+            social: {
+              facebook:
+                "https://www.facebook.com/profile.php?id=100085852059112",
+              linkedin: "https://www.linkedin.com/in/samar-guedri-b599a7353/",
+            },
+          },
+        ];
+
+        return (
+          <section id="team" className="team py-12 bg-gray-900 text-white">
+            <div className="container mx-auto px-4">
+              <div
+                className="section-title text-center mb-12"
+                data-aos="fade-up"
+              >
+                <h2 className="text-3xl font-bold">Team</h2>
+                <p>
+                  Découvrez notre équipe d'experts, composée de professionnels
+                  qualifiés et motivés
+                </p>
+              </div>
+              <div className="flex flex-wrap -mx-4">
+                {teamMembers.map((member, index) => (
+                  <div
+                    className="w-full lg:w-3/12 md:w-6/12 px-4 mb-4"
+                    key={index}
+                    data-aos="fade-up"
+                    data-aos-delay={(index + 1) * 100}
+                  >
+                    <div className="team-member">
+                      <div className="member-img relative">
+                        <img
+                          src={`assets/img/team/${member.img}`}
+                          className="img-fluid w-full h-[300px] object-cover"
+                          alt={member.name}
+                        />
+                        <div className="social absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 flex justify-center space-x-4 py-2">
+                          <a href={member.social.twitter || "#"}>
+                            <i className="bi bi-twitter-x"></i>
+                          </a>
+                          <a href={member.social.facebook || "#"}>
+                            <i className="bi bi-facebook"></i>
+                          </a>
+                          <a href={member.social.instagram || "#"}>
+                            <i className="bi bi-instagram"></i>
+                          </a>
+                          <a href={member.social.linkedin || "#"}>
+                            <i className="bi bi-linkedin"></i>
+                          </a>
+                        </div>
+                      </div>
+                      <div className="member-info text-center mt-4">
+                        <h4 className="text-lg font-semibold">{member.name}</h4>
+                        <span>{member.role}</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        );
+      }
+
+      // Contact Section Component
+      function ContactSection() {
+        return (
+          <section id="contact" className="contact py-12">
+            <div className="container mx-auto px-4">
+              <div
+                className="section-title text-center mb-12"
+                data-aos="fade-up"
+              >
+                <h2 className="text-3xl font-bold">Contact</h2>
+                <p>
+                  Besoin d’aide ou d’un renseignement ? Écrivez-nous via le
+                  formulaire ou retrouvez-nous facilement grâce à la carte
+                  ci-dessous !
+                </p>
+              </div>
+              <div className="flex flex-wrap -mx-4">
+                <div className="w-full lg:w-6/12 px-4 mb-4">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3107.376675257746!2d10.593756275642969!3d35.856535572531264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd8a40325cdae5%3A0x7a33004f92fd30ea!2sMunicipalit%C3%A9%20Hammam%20Sousse!5e1!3m2!1sfr!2stn!4v1740510437957!5m2!1sfr!2stn"
+                    width="100%"
+                    height="450"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+                <div
+                  className="w-full lg:w-6/12 px-4"
+                  data-aos="fade-up"
+                  data-aos-delay="500"
+                >
+                  <form
+                    action="https://api.web3forms.com/submit"
+                    method="POST"
+                    className="php-email-form"
+                  >
+                    <input
+                      type="hidden"
+                      name="access_key"
+                      value="d0ad8546-6a3b-475a-ba0e-36ca0a0e585f"
+                    />
+                    <input
+                      type="hidden"
+                      name="redirect"
+                      value="https://clinquant-semolina-b09628.netlify.app/"
+                    />
+                    <div className="flex flex-wrap -mx-4">
+                      <div className="w-full md:w-6/12 px-4 mb-4">
+                        <input
+                          type="text"
+                          name="name"
+                          className="form-control w-full p-2 border rounded"
+                          placeholder="Your Name"
+                          required
+                        />
+                      </div>
+                      <div className="w-full md:w-6/12 px-4 mb-4">
+                        <input
+                          type="email"
+                          name="email"
+                          className="form-control w-full p-2 border rounded"
+                          placeholder="Your Email"
+                          required
+                        />
+                      </div>
+                      <div className="w-full px-4 mb-4">
+                        <textarea
+                          className="form-control w-full p-2 border rounded"
+                          name="message"
+                          rows="4"
+                          placeholder="Message"
+                          required
+                        ></textarea>
+                      </div>
+                      <div className="w-full px-4 text-center">
+                        <button
+                          type="submit"
+                          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                        >
+                          Send Message
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+        );
+      }
+
+      // Footer Component
+      function Footer() {
+        return (
+          <footer id="footer" className="footer bg-gray-900 text-white py-12">
+            <div className="container footer-top mx-auto px-4">
+              <div className="flex flex-wrap -mx-4">
+                <div className="w-full lg:w-4/12 md:w-6/12 px-4 mb-4">
+                  <a href="index.html" className="logo flex items-center">
+                    <span className="sitename text-2xl font-bold">
+                      Baladia +
+                    </span>
+                  </a>
+                  <div className="footer-contact pt-3">
+                    <p>rue de la republique</p>
+                    <p>Hammam-Sousse 4011</p>
+                    <p className="mt-3">
+                      <strong>Phone:</strong> <span>73 363 086</span>
+                    </p>
+                    <p>
+                      <strong>Email:</strong>{" "}
+                      <span>contact@commune-hammamsousse.gov.tn</span>
+                    </p>
+                  </div>
+                  <div className="social-links flex space-x-4 mt-4">
+                    <a href="#">
+                      <i className="bi bi-twitter-x"></i>
+                    </a>
+                    <a href="#">
+                      <i className="bi bi-facebook"></i>
+                    </a>
+                    <a href="#">
+                      <i className="bi bi-instagram"></i>
+                    </a>
+                    <a href="#">
+                      <i className="bi bi-linkedin"></i>
+                    </a>
+                  </div>
+                </div>
+                <div className="w-full lg:w-2/12 md:w-3/12 px-4 mb-4">
+                  <h4 className="text-lg font-semibold">Useful Links</h4>
+                  <ul className="list-none">
+                    <li>
+                      <a href="#" className="text-gray-300 hover:text-white">
+                        Home
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="text-gray-300 hover:text-white">
+                        About us
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="text-gray-300 hover:text-white">
+                        Services
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="text-gray-300 hover:text-white">
+                        Terms of service
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="text-gray-300 hover:text-white">
+                        Privacy policy
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="w-full lg:w-2/12 md:w-3/12 px-4 mb-4">
+                  <h4 className="text-lg font-semibold">Our Services</h4>
+                  <ul className="list-none">
+                    <li>
+                      <a href="#" className="text-gray-300 hover:text-white">
+                        Web Design
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="text-gray-300 hover:text-white">
+                        Web Development
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="text-gray-300 hover:text-white">
+                        Product Management
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="text-gray-300 hover:text-white">
+                        Marketing
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="text-gray-300 hover:text-white">
+                        Graphic Design
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="w-full lg:w-4/12 md:w-12/12 px-4">
+                  <h4 className="text-lg font-semibold">Our Newsletter</h4>
+                  <p>
+                    Subscribe to our newsletter and receive the latest news
+                    about our products and services!
+                  </p>
+                  <form
+                    action="forms/newsletter.php"
+                    method="post"
+                    className="php-email-form"
+                  >
+                    <div className="newsletter-form flex">
+                      <input
+                        type="email"
+                        name="email"
+                        className="p-2 border rounded-l w-full"
+                      />
+                      <input
+                        type="submit"
+                        value="Subscribe"
+                        className="bg-blue-600 text-white p-2 rounded-r hover:bg-blue-700"
+                      />
+                    </div>
+                    <div className="loading hidden">Loading</div>
+                    <div className="error-message hidden"></div>
+                    <div className="sent-message hidden">
+                      Your subscription request has been sent. Thank you!
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div className="container copyright text-center mt-4">
+              <p>
+                © <span>Copyright</span>{" "}
+                <strong className="px-1 sitename">Baladia +</strong>{" "}
+                <span>All Rights Reserved</span>
+              </p>
+            </div>
+          </footer>
+        );
+      }
+
+      // Scroll Top Component
+      function ScrollTop() {
+        return (
+          <a
+            href="#"
+            id="scroll-top"
+            className="scroll-top fixed bottom-4 right-4 bg-blue-600 text-white p-2 rounded-full flex items-center justify-center hover:bg-blue-700"
+          >
+            <i className="bi bi-arrow-up-short"></i>
+          </a>
+        );
+      }
+
+      // Main App Component
+      function App() {
+        React.useEffect(() => {
+          AOS.init();
+          const glightbox = GLightbox({ selector: ".glightbox" });
+        }, []);
+
+        return (
+          <div className="index-page">
+            <Header />
+            <main className="main">
+              <HeroSection />
+              <ClientsSection />
+              <AboutSection />
+              <StatsSection />
+              <TabsSection />
+              <ServicesSection />
+              <PortfolioSection />
+              <TestimonialsSection />
+              <FaqSection />
+              <TeamSection />
+              <ContactSection />
+            </main>
+            <Footer />
+            <ScrollTop />
+          </div>
+        );
+      }
+
+      // Render the App
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<App />);
+    </script>
+  </body>
+</html>
